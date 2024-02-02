@@ -1,0 +1,85 @@
+/* generl settings */
+*,
+*:after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* chart and info wrappers */
+.container {
+  width: 97%;
+  min-width: 265px;
+  margin-left: auto;
+  padding: 20px 20px 0 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* chart address */
+.chart-address h5,
+.range {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.9px;
+}
+
+/* chart period time >> select year */
+.range {
+  margin: 7px 0;
+  color: #99A1B7;
+  cursor: pointer;
+  border: transparent;
+}
+
+.range:focus,
+.range:active {
+  outline: transparent;
+  border: 1px solid #d9d7d7;
+}
+
+/* statistic >> chart duration + address*/
+.display-duration {
+  width: 67.37px;
+  height: 30.28px;
+  font-size: 12.11px;
+  font-weight: 400;
+  line-height: 16.96px;
+  text-align: center;
+  background-color: #E8E8E8;
+  border: 0.81px solid #E8E8E8;
+  border-radius: 8.07px;
+  outline: 1px solid #d9d7d7
+}
+
+/* apex chart */
+:host ::ng-deep .chart-container {
+  width: 100%;
+  min-width: 270px;
+}
+
+:host ::ng-deep .apexcharts-canvas {
+  max-width: 100%;
+}
+
+:host ::ng-deep .custom-tooltip {
+  height: 47.13px;
+  background-color: #1E1B39;
+  color: #E5E5EF;
+  font-size: 12.11px;
+  font-weight: 400;
+  padding: 8px 8px 4px 8px;
+  line-height: 12.9px;
+}
+
+/* query for small screens */
+@media (max-width: 365px) {
+  .container {
+    padding: 20px 7px 0;
+  }
+
+  .address-wrapper {
+    flex-wrap: wrap;
+  }
+}

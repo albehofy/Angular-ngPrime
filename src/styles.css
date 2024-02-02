@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+/* importing prime icons css file */
+@import "primeicons/primeicons.css";
+
+/* importing fonts */
+@font-face {
+    font-family: 'Neo Sans Arabic, Inter';
+    src: url('/assets/fonts/NeoSansArabicMedium.woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/assets/fonts/OpenSans_Condensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Medium.ttf');
+}
+
+/* general settings */
+html,
+body {
+    font-family: 'Neo Sans Arabic, Inter';
+    background-color: #F3F5F7;
+}
+
+/* general Classes */
+.flex--justify--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--justify--evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flex--justify--around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex--justify--between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+    row-gap: 7px;
+}

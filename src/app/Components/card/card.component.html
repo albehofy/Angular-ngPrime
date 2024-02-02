@@ -1,0 +1,52 @@
+<!-- alert message for copy text -->
+<p class="alert---message" [ngClass]="{show:textCopied}">
+    <span class="close" (click)="textCopied = false">اغلاق</span>
+    {{copiedStatus}}
+</p>
+
+<!-- card background vectors -->
+<div class="absolute-vectors">
+    <img class="img-vector-layout top-negative" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-negative-1" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-0" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-1" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-2" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-3" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-4" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-5" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-6" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-7" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-8" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-9" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-10" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-11" [src]="'/assets/images/Vector.svg'" alt="">
+    <img class="img-vector-layout top-12" [src]="'/assets/images/Vector.svg'" alt="">
+</div>
+
+<!-- card data -->
+<div class="absolute-card">
+    <div class="ticket--info">
+        <div class="ticket--view">
+            <p class="view--text">عرض التذكرة الخاصة بالفيلم</p>
+            <img [src]="'/assets/images/trash.svg'" class="trash--icon" alt="trash" tooltipPosition="bottom"
+                pTooltip="حذف">
+        </div>
+        <p class="ticket--link flex--justify--evenly">
+            <textarea #tecketUrl name="teck url" id="ticketUrl" value="www.tazkty.com/473847"
+                readonly>www.tazkty.com/473847</textarea>
+            <i class="pi pi-copy" (click)="copyTecketUrl(tecketUrl);" tooltipPosition="bottom" pTooltip="نسخ النص"></i>
+        </p>
+        <p class="exp-date">فعال حتي 15 يوليو 2023</p>
+    </div>
+    <div class="layout--dashed-border"></div>
+    <div class="ticket--sahre">
+        <div class="discount">
+            <p>خصم <span>25%</span> </p>
+            <div class="share flex--justify--around" tooltipPosition="bottom" pTooltip="مشاركة">
+                <img [src]="'/assets/images/share.svg'" alt="">
+                مشاركة
+            </div>
+        </div>
+        <qrcode [qrdata]="data" [width]="82" [errorCorrectionLevel]="'L'" class="qr-data"></qrcode>
+    </div>
+</div>

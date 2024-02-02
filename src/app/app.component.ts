@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AngularTask1';
+  title = 'AngularTask1'; 
+  isLoading = true;
+  constructor(){
+    window.setTimeout(()=>{
+      this.isLoading = false;
+    },2000)
+  }
 }

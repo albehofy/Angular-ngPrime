@@ -1,4 +1,28 @@
-<div class="continer">
-  <app-tecket-header></app-tecket-header>
-  
+<app-loading [ngClass]="{'hidden': !isLoading}"></app-loading>
+<div class="container" [ngClass]="{'hidden':isLoading}">
+    <!-- header -->
+    <div class="flex--justify--between">
+        <p class="tecket-number flex--justify--center">
+            <i class="pi pi-arrow-right" tooltipPosition="bottom" pTooltip="العودة"></i>
+            تذكرة رقم #2342
+        </p>
+        <button class="edit flex--justify--around" tooltipPosition="bottom" pTooltip="تعديل">
+            <img [src]="'/assets/images/edit.svg'" alt="">
+            تعديل
+        </button>
+    </div>
+
+    <!-- chart + card -->
+    <div class='stastic--info flex--justify--between flex-wrap '>
+        <div class="chart--wrapper">
+            <app-chart></app-chart>
+        </div>
+        <div class="card--wrapper">
+            <app-card></app-card>
+        </div>
+    </div>
+
+    <!-- table -->
+    <app-table></app-table>
+
 </div>

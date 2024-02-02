@@ -1,0 +1,341 @@
+/* table tolbar for filtering table data */
+.table-top-tolbar {
+    margin-bottom: 16px;
+}
+
+/* table name */
+.table-address {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1C1C28;
+    margin: auto;
+}
+
+/* filtering data > search */
+.table-search {
+    width: 90%;
+    min-width: 100px;
+    height: 36px;
+}
+
+input.table-search::placeholder {
+    color: #92A1AD;
+}
+
+/* setting gap for filter(search , sort ),  and action (toggler, action button )  */
+.table--tolbar-search,
+.table--tolbar-action {
+    column-gap: 10px;
+}
+
+/* sort, and settings search */
+.table-tolbar-settings {
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 7.5px;
+    cursor: pointer;
+}
+
+/* table action */
+.table--tolbar-action {
+    min-width: 197.75px
+}
+
+/* toggler */
+:host ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider,
+:host ::ng-deep .p-inputswitch .p-inputswitch-slider {
+    width: 34px;
+    height: 18px;
+    margin-top: 8px;
+}
+
+:host ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before,
+:host ::ng-deep .p-inputswitch .p-inputswitch-slider:before {
+    width: 14.03px;
+    height: 14.03px;
+    line-height: 14.0.3px;
+    margin-top: -0.435rem;
+}
+
+:host ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before {
+    left: -0.25rem;
+}
+
+/* label for toggler */
+.toggler span {
+    width: 70px;
+    text-align: right;
+    color: #9C9D9F;
+    font-weight: 400;
+}
+
+/* action button */
+:host ::ng-deep .p-button {
+    height: 35px;
+    border-radius: 6px;
+    background-color: #8A74F9;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* clients data */
+table {
+    font-family: 'Neo Sans Arabic, Inter';
+    background-color: #FFFFFF;
+}
+
+thead {
+    height: 41px;
+    font-size: 13.28px;
+    font-weight: 400;
+    background-color: #E3E4E9;
+    border-radius: 6px;
+}
+
+tbody {
+    font-size: 13.28px;
+}
+
+th {
+    min-width: 123px;
+    color: #ABAAB1;
+}
+
+th.large--data {
+    min-width: 201px;
+}
+
+th.xlarge--data {
+    min-width: 271px;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+/* scrollbar settings */
+:host ::ng-deep .p-datatable>.p-datatable-wrapper::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+:host ::ng-deep .p-datatable>.p-datatable-wrapper::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+:host ::ng-deep .p-datatable>.p-datatable-wrapper::-webkit-scrollbar-thumb {
+    background: #8A74F9;
+}
+
+/* client number cell */
+.client--no {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 13.28px;
+    line-height: 23.24px;
+    color: #898995;
+}
+
+/* client peronal info > image = name + phone */
+.client-image {
+    width: 29.88px;
+    height: 29.88px;
+    border-radius: 17.43px;
+}
+
+.client--name {
+    font-size: 11.62px;
+    font-weight: 400;
+}
+
+.client-phone {
+    font-family: "Popians";
+    font-size: 9.96px;
+    color: #92A1AD;
+}
+
+/* ticket info > num + price + number of person in the group */
+.ticket-num,
+.ticket--price,
+.visitor--group {
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 23.24px;
+    color: #1C1C28;
+}
+
+.cinema--place,
+.subscribtion--number {
+    font-family: "Neo Sans Arabic";
+    font-size: 13.28px;
+    font-weight: 400;
+    line-height: 19.92px;
+}
+
+/* download info > ticket file name + file size + ticket icon + download icon */
+.ticket--info-container,
+.ticket--info-ticket {
+    font-size: 11.67px;
+}
+
+.ticket--info-ticket {
+    display: block;
+    margin: 5px auto;
+    font-family: "Neo Sans Arabic";
+    font-weight: 500;
+    text-align: right;
+    color: #000000;
+    line-height: 17.5px;
+}
+
+.ticket--icon {
+    width: 31.67px;
+    height: 31.67px;
+    padding: 8.335px;
+    gap: 6.6px;
+    background-color: #8A74F91A;
+    border-radius: 7.92px;
+}
+
+.ticket--info-file-type,
+.ticket--info-file-size {
+    font-family: "Inter";
+    font-size: 10px;
+    text-align: right;
+    line-height: 15px;
+    color: #00000066;
+}
+
+.ticket--info-file-type {
+    font-weight: 500;
+}
+
+.ticket--info-file-size {
+    display: inline-block;
+    margin-right: 7px;
+    font-weight: 400;
+}
+
+.download--icon {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #8A74F9;
+    border: 1.25px solid #8A74F9;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.download--icon i {
+    font-size: 9.15px;
+}
+
+/* Footer And Paginator for Pages Numbers */
+:host ::ng-deep .p-datatable-footer {
+    background-color: #FFF;
+}
+
+:host ::ng-deep .p-paginator {
+    padding: 7px 0;
+    direction: ltr;
+    flex-wrap: nowrap;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-first,
+:host ::ng-deep .p-paginator .p-paginator-last,
+:host ::ng-deep .p-paginator .p-dropdown {
+    display: none;
+}
+
+:host ::ng-deep .p-paginator-pages {
+    direction: rtl;
+    width: 75%;
+    height: 53px;
+    overflow: hidden;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    width: 27px;
+    height: 27px;
+    font-family: Inter;
+    font-size: 13.5px;
+    line-height: 13.5px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #8A74F9;
+    color: #FFFFFF;
+    border-radius: 4.5px;
+    margin: 8px;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 27px;
+}
+
+:host :ng-deep .p-paginator-page {
+    min-width: initial !important;
+}
+
+:host :ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+}
+
+
+.paginator,
+.pages--holder,
+.pages---numbers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pages-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pages-info .show {
+    color: #333333;
+    font-family: "Neo Sans Arabic";
+    font-size: 10.5px;
+    font-weight: 400;
+    line-height: 12.56px;
+}
+
+.displayed--pages {
+    direction: rtl;
+    width: 52.5px;
+    height: 31.5px;
+    padding: 6px 11.25px 6px 11.25px;
+    background-color: #FFFFFF;
+    border: 0.75px solid #DDDDDD;
+    border-radius: 6px;
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 10.5px;
+    line-height: 14.3px;
+}
+
+.all-pages {
+    font-family: "Neo Sans Arabic";
+    font-weight: 400;
+    line-height: 12.56px;
+    font-size: 10.5px;
+}
+
+.all-pages .special {
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 14.3px;
+}

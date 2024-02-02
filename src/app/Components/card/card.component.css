@@ -1,0 +1,282 @@
+.alert---message {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+    text-align: center;
+    width: 250px;
+    height: 55px;
+    margin: 10px auto;
+    line-height: 55px;
+    border-radius: 8px;
+    background-color: #8A74F9;
+    color: #fff;
+    transition: all 300ms;
+    display: none;
+    border: 1px dashed #1C1C28;
+}
+
+.show {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+    line-height: 31px;
+    text-align: center;
+    font-size: 10.5px;
+    border: 1px solid #42d6a4;
+    cursor: pointer;
+}
+
+/* ticket card */
+.absolute-vectors,
+.absolute-card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.absolute-vectors {
+    z-index: 1;
+}
+
+.img-vector-layout {
+    position: absolute;
+    transform: rotate(0);
+    width: 200%;
+}
+
+.top-negative-1 {
+    top: -110%;
+    left: 10px;
+}
+
+.top-negative {
+    top: -100%;
+    left: 10px;
+}
+
+.top-0 {
+    top: -90%;
+    left: 10px;
+}
+
+.top-1 {
+    top: -75%;
+    left: 10px;
+}
+
+.top-2 {
+    top: -60%;
+    left: 10px;
+}
+
+.top-3 {
+    top: -45%;
+    left: 10px;
+}
+
+.top-4 {
+    top: -30%;
+    left: 10px;
+}
+
+.top-5 {
+    top: -15%;
+    left: 10px;
+}
+
+.top-6 {
+    top: 0%;
+    left: -10px;
+}
+
+.top-7 {
+    top: 15%;
+    left: -10px;
+}
+
+.top-8 {
+    top: 30%;
+    left: -10px;
+
+}
+
+.top-9 {
+    top: 45%;
+    left: -10px;
+}
+
+.top-10 {
+    top: 60%;
+    left: -10px;
+}
+
+.top-11 {
+    top: 75%;
+    left: -10px;
+}
+
+.top-12 {
+    top: 90%;
+    left: -10px;
+}
+
+.absolute-card {
+    z-index: 9;
+    background: transparent;
+}
+
+.ticket--view {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 24px;
+}
+
+/* ticket address for sharing */
+.view--text {
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+}
+
+.trash--icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* ticket link */
+.ticket--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-width: 226.2px;
+    height: 42px;
+    line-height: 42px;
+    margin: auto;
+    color: #1C1C28;
+    border-radius: 8.32px;
+    background-color: #fff;
+    margin: 14px auto;
+}
+
+/* ticket for copying url */
+.ticket--link i {
+    cursor: pointer;
+    color: #8A74F9;
+    z-index: 99999;
+}
+
+/* ticket Url style */
+#ticketUrl {
+    display: inline-flex;
+    height: 29px;
+    background: transparent;
+    color: #1C1C28;
+    border: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 23.28px;
+    resize: none;
+    outline: transparent;
+    border: transparent;
+}
+
+/* expiration date */
+.exp-date {
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* layout in ticket sharing */
+.layout--dashed-border {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    border: 1px dashed #FFF;
+    margin: 15px auto;
+}
+
+.layout--dashed-border::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-color: #F3F5F7;
+    position: absolute;
+    top: 0;
+    left: -0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999999;
+}
+
+.layout--dashed-border::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-color: #F3F5F7;
+    position: absolute;
+    top: 0;
+    right: -0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    z-index: 999999;
+}
+
+.ticket--sahre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+}
+
+.discount>p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.74px;
+}
+
+.discount>p span {
+    display: block;
+    margin-top: 8.23px;
+    font-weight: 500;
+    font-family: Montserrat;
+    font-size: 18px;
+}
+
+.share {
+    width: 70px;
+    height: 24px;
+    padding: 4px, 6px, 4px, 6px;
+    margin-top: 21px;
+    margin-right: 21px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}

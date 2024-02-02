@@ -1,0 +1,102 @@
+<p-overlayPanel #op class="sorting---type"
+    [style]="{'text-align': 'right', 'font-family':'Neo Sans Arabic, Inter','font-size':'12.5px','font-weight':'600'}">
+    <label for="name" (click)="filterData('name', reversed); key ='name'"> الاسم <input type="radio" name="sorting"
+            id="name" value="name"> </label> <br>
+    <label for="price" (click)="filterData('ticketPrice', reversed);key ='ticketPrice'"> سعر التذكرة <input type="radio"
+            name="sorting" id="ticketPrice" value="ticketPrice"></label>
+    <br>
+    <label for="tecketNO" (click)="filterData('tecketNO', reversed); key='tecketNO'">رقم التذكرة <input type="radio"
+            name="sorting" id="tecketNO" value="tecketNO"> </label>
+</p-overlayPanel>
+<div class="flex--justify--between flex-wrap table-top-tolbar">
+    <div class="table--tolbar-search flex--justify--between">
+        <p class="table-address">مبيعات التذاكر</p>
+        <span class="p-input-icon-right">
+            <i class="pi pi-search"></i>
+            <input type="text" class="table-search" placeholder="بحث عن ..." pInputText />
+        </span>
+        <span class="table-tolbar-settings" (click)="op.toggle($event)"><img [src]="'/assets/images/slider.svg'"
+                alt="slider" tooltipPosition="bottom" pTooltip="اعدادات العرض"></span>
+        <span class="table-tolbar-settings"><img [src]="'/assets/images/sort-alt.svg'" alt="slider"
+                tooltipPosition="bottom" pTooltip="ترتيب"
+                (click)="filterData(key, reversed); reversed = !reversed"></span>
+    </div>
+    <div class="table--tolbar-action flex--justify--between">
+        <div class="toggler flex--justify--between">
+            <p-inputSwitch [(ngModel)]="checked" tooltipPosition="bottom"
+                pTooltip="( تفعيل | الغاء تفعيل )"></p-inputSwitch>
+            <span>{{checked?'مفعلة':'غير مفعلة'}}</span>
+        </div>
+        <p-button label="حجز تذكرة جديدة" tooltipPosition="bottom" pTooltip="حجز تذكرة جديدة"></p-button>
+    </div>
+</div>
+
+<p-table [value]="filteredData"
+    [tableStyle]="{'min-width': '50rem', 'direction':'rtl', 'background-color':'#FFFFFF', 'font-weight':'400', 'text-align':'center'}">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th>#</th>
+            <th>المستخدم</th>
+            <th>رقم التذكرة</th>
+            <th>قيمي التذكرة
+                <img [src]="'/assets/images/sort-alt-dark.svg'" alt="slider">
+            </th>
+            <th class="xlarge--data">السينمات</th>
+            <th>عدد الأشخاص</th>
+            <th>عدد مرات الشراء</th>
+            <th class="large--data">التذكرة</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-client let-columns="columns">
+        <tr>
+            <td class="client--no">{{client.number}}</td>
+            <td>
+                <div class="flex--justify--between">
+                    <img [src]="client.image" alt="" class="client-image">
+                    <div class="client--personal-info">
+                        <p class="client--name">{{client.name}}</p>
+                        <p class="client-phone">{{client.phone}}</p>
+                    </div>
+                </div>
+            </td>
+            <td class="ticket-num">{{client.tecketNO}}</td>
+            <td class="ticket--price">{{client.ticketPrice | currency:'USD':'symbol':'1.0-0'}}</td>
+            <td class="cinema--place">
+                <span>
+                    {{client.cinemaPlace[1]}}
+                </span>
+                <span *ngIf="client.cinemaPlace[0]" [pTooltip]="client.cinemaPlace[2]"
+                    [tooltipDisabled]="client.cinemaPlace[2]==''" tooltipPosition="top">, ....</span>
+            </td>
+            <td class="visitor--group">{{client.visitorsGroupNO}}</td>
+            <td class="subscribtion--number">{{client.ticketSubscribtionNo}}</td>
+            <td class="ticket--info-container flex--justify--between">
+                <img [src]="'/assets/images/ticket.svg'" alt="" class="ticket--icon">
+                <p class="ticket--info">
+                    <span class="ticket--info-ticket">{{client.ticket}}</span>
+                    <span class="ticket--info-file-type">{{client.fileType}}</span>
+                    <span class="ticket--info-file-size">{{client.fileSize}}</span>
+                </p>
+                <span class="download--icon" tooltipPosition="bottom" pTooltip="تحميل التذكرة">
+                    <i class="pi pi-download"></i>
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary" class="footer" style="background-color: #fff;">
+        <div class="paginator">
+            <div class="pages-info">
+                <span class="show">عرض</span>
+                <select name="displayed pages" class="displayed--pages" id="displayedPages">
+                    <option value="20" selected>20</option>
+                </select>
+                <span class="all-pages">من اصل <span class="special">250</span></span>
+            </div>
+
+
+            <p-paginator [first]="first" [rows]="rows" [totalRecords]="120"
+                [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+        </div>
+
+    </ng-template>
+</p-table>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class=" flex--justify--between address-wrapper">
+    <!-- chart addreess >> (start - end) date -->
+    <div class="chart-address">
+      <h5>إحصائيات استخدام القسيمة</h5>
+      <select name="range" id="range" class="range">
+        <option value="">5 يوليو , 2023 - 5 أغسطس , 2023</option>
+      </select>
+    </div>
+    <!-- preiod time > yearly | monthly , etc -->
+    <select id="display-duration" class="display-duration" (change)=" periodTime($event)">
+      <option value="yearly">سنوياً</option>
+      <option value="monthly" selected>شهريا</option>
+    </select>
+  </div>
+  <div class="chart-container" #chart></div>
+</div>

@@ -68,8 +68,10 @@ export class TableComponent {
     },
   ];
 
-  reversed: boolean = false;
   key: string = 'name'
+  reversed: boolean = false;
+  sortReversed:boolean = true; 
+  ticketPricereversed:boolean = false;
   filteredData: any = [...this.clients];
 
   first: number = 1;

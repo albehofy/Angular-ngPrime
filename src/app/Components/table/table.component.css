@@ -111,6 +111,11 @@ th.xlarge--data {
     min-width: 271px;
 }
 
+th .sorted--value-controler {
+    margin: auto 7px;
+    cursor: pointer;
+
+}
 th,
 td {
     text-align: center;

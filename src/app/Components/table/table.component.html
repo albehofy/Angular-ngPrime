@@ -1,5 +1,8 @@
 <p-overlayPanel #op class="sorting---type"
     [style]="{'text-align': 'right', 'font-family':'Neo Sans Arabic, Inter','font-size':'12.5px','font-weight':'600'}">
+    <label for="tecketNO" (click)="filterData('tecketNO', reversed); key='tecketNO'">#<input type="radio" name="sorting"
+            id="number" value="tecketNO"> </label>
+    <br>
     <label for="name" (click)="filterData('name', reversed); key ='name'"> الاسم <input type="radio" name="sorting"
             id="name" value="name"> </label> <br>
     <label for="price" (click)="filterData('ticketPrice', reversed);key ='ticketPrice'"> سعر التذكرة <input type="radio"
@@ -7,6 +10,7 @@
     <br>
     <label for="tecketNO" (click)="filterData('tecketNO', reversed); key='tecketNO'">رقم التذكرة <input type="radio"
             name="sorting" id="tecketNO" value="tecketNO"> </label>
+
 </p-overlayPanel>
 <div class="flex--justify--between flex-wrap table-top-tolbar">
     <div class="table--tolbar-search flex--justify--between">
@@ -18,8 +22,8 @@
         <span class="table-tolbar-settings" (click)="op.toggle($event)"><img [src]="'/assets/images/slider.svg'"
                 alt="slider" tooltipPosition="bottom" pTooltip="اعدادات العرض"></span>
         <span class="table-tolbar-settings"><img [src]="'/assets/images/sort-alt.svg'" alt="slider"
-                tooltipPosition="bottom" pTooltip="ترتيب"
-                (click)="filterData(key, reversed); reversed = !reversed"></span>
+                tooltipPosition="left" pTooltip="ترتيب العناصر"
+                (click)="filterData(key, sortReversed); sortReversed = !sortReversed; reversed = !reversed"></span>
     </div>
     <div class="table--tolbar-action flex--justify--between">
         <div class="toggler flex--justify--between">
@@ -39,7 +43,10 @@
             <th>المستخدم</th>
             <th>رقم التذكرة</th>
             <th>قيمي التذكرة
-                <img [src]="'/assets/images/sort-alt-dark.svg'" alt="slider">
+                <img class="sorted--value-controler"
+                    (click)="filterData('ticketPrice', ticketPricereversed); ticketPricereversed = !ticketPricereversed"
+                    [src]="'/assets/images/sort-alt-dark.svg'" tooltipPosition="bottom" pTooltip="ترتيب قيمة التذكرة "
+                    alt="slider">
             </th>
             <th class="xlarge--data">السينمات</th>
             <th>عدد الأشخاص</th>
